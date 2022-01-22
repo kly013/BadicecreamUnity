@@ -9,7 +9,7 @@ public class MapCreate : CoordinateSystem
     public GameObject redball;
     public GameObject yellowball;
 
-    public int Level = 1;
+    public int Level = 0;
 
     //¦B¶ô³õ´º
     int[,] IceMap = new int[16, 16]
