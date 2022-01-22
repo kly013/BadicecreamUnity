@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,9 +13,10 @@ public class CoordinateSystem : MonoBehaviour
         float Grid_x;
         float Grid_z;
 
-        // x°¾²¾¶q + x®y¼Ğ * ©ñ¤j¤ñ¨Ò
+        // xåç§»é‡ + xåº§æ¨™ * æ”¾å¤§æ¯”ä¾‹
         Grid_x = World_x+ gx * Ratio; 
-        // z°¾²¾¶q - z®y¼Ğ * ©ñ¤j¤ñ¨Ò
+
+        // zåç§»é‡ - zåº§æ¨™ * æ”¾å¤§æ¯”ä¾‹
         Grid_z = World_z - gz * Ratio; 
 
         return new Vector3(Grid_x, 5, Grid_z);

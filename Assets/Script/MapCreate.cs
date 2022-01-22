@@ -1,17 +1,17 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class MapCreate : CoordinateSystem
 {
-    //Prefabª«¥ó
+    //Prefabç‰©ä»¶
     public GameObject ice;
     public GameObject redball;
     public GameObject yellowball;
 
     public int Level = 0;
 
-    //¦B¶ô³õ´º
+    //å†°å¡Šå ´æ™¯
     int[,] IceMap = new int[16, 16]
     {
     { 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 },
@@ -32,7 +32,7 @@ public class MapCreate : CoordinateSystem
     { 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 },
     };
 
-    //¬õ²y_±o¤À¥Ø¼Ğ
+    //ç´…çƒ_å¾—åˆ†ç›®æ¨™
     int[,] RedBallMap = new int[16, 16]
     {
     { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 },
@@ -53,7 +53,7 @@ public class MapCreate : CoordinateSystem
     { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 },
     };
 
-    //¶À²y_±o¤À¥Ø¼Ğ
+    //é»ƒçƒ_å¾—åˆ†ç›®æ¨™
     int[,] YellowBallMap = new int[16, 16]
     {
     { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 },
@@ -85,7 +85,7 @@ public class MapCreate : CoordinateSystem
         YelowBallcreate();
     }
 
-    //²£¥Í¦B¶ô
+    //ç”¢ç”Ÿå†°å¡Š
     void Icecreate()
     {
         for (int y = 0; y < 16; y++)
@@ -100,7 +100,7 @@ public class MapCreate : CoordinateSystem
         }
     }
 
-    //²£¥Í¬õ²y
+    //ç”¢ç”Ÿç´…çƒ
     void RedBallcreate()
     {
         if (Level == 1)
@@ -118,7 +118,7 @@ public class MapCreate : CoordinateSystem
         }
     }
 
-    //²£¥Í¶À²y
+    //ç”¢ç”Ÿé»ƒçƒ
     void YelowBallcreate()
     {
         if (Level == 2)
