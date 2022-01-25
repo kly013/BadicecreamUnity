@@ -11,6 +11,7 @@ public class LevelController : MonoBehaviour
     public GameObject ice;
     public GameObject redball;
     public GameObject yellowball;
+    public GameObject player;
 
     // 由地圖陣列產生物件
     public void CreateMapItems(int[,] map)
