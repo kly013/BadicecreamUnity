@@ -547,6 +547,8 @@ MonoBehaviour:
   CurrMissionNum: 0
   missionItems: []
   ice: {fileID: 1967137148815088527, guid: f0d333b4844eaf146803dbd55aeb984c, type: 3}
+  RedBallImage: {fileID: 971049240}
+  YellowBallImage: {fileID: 1691061179}
   redball: {fileID: 5901235741625652717, guid: 78715de6f8c5f0d4fa25437aa3e50620, type: 3}
   yellowball: {fileID: 7237405947756746677, guid: 56b5440bbbbbb064e8c74aff2d181e55, type: 3}
   player: {fileID: 290302295}
@@ -932,7 +934,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1691061180
 MonoBehaviour:
   m_ObjectHideFlags: 0

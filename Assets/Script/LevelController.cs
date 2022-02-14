@@ -12,6 +12,8 @@ public class LevelController : MonoBehaviour
     public List<MissionItem> missionItems;
 
     public GameObject ice;
+    public GameObject RedBallImage;
+    public GameObject YellowBallImage;
     public MissionItem redball;
     public MissionItem yellowball;
     public Player player;
@@ -71,10 +73,13 @@ public class LevelController : MonoBehaviour
                 // 切換任務
                 CurrMissionNum++;
                 InitMission(Missions[CurrMissionNum]);
+                RedBallImage.SetActive(false);
+                YellowBallImage.SetActive(true);
             }
             else
             {
                 // 切換關卡
+                YellowBallImage.SetActive(false);
                 SceneManager.LoadScene(1);
             }
         }
