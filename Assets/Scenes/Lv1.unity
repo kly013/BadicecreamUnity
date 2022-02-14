@@ -219,6 +219,7 @@ GameObject:
   - component: {fileID: 290302291}
   - component: {fileID: 290302290}
   - component: {fileID: 290302294}
+  - component: {fileID: 290302295}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -322,6 +323,21 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &290302295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290302289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46f752dc3d1accb439f512c8007749d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GridX: 7
+  GridY: 13
+  FaceDir: 3
 --- !u!1 &596819295
 GameObject:
   m_ObjectHideFlags: 0
@@ -528,12 +544,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a36d19c5f213f451b826f28507b62bdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MissionNum: 0
-  Missions: []
+  CurrMissionNum: 0
+  missionItems: []
   ice: {fileID: 1967137148815088527, guid: f0d333b4844eaf146803dbd55aeb984c, type: 3}
-  redball: {fileID: 5724033999975534041, guid: 78715de6f8c5f0d4fa25437aa3e50620, type: 3}
-  yellowball: {fileID: 8064072418373758638, guid: 56b5440bbbbbb064e8c74aff2d181e55, type: 3}
-  player: {fileID: 290302289}
+  redball: {fileID: 5901235741625652717, guid: 78715de6f8c5f0d4fa25437aa3e50620, type: 3}
+  yellowball: {fileID: 7237405947756746677, guid: 56b5440bbbbbb064e8c74aff2d181e55, type: 3}
+  player: {fileID: 290302295}
 --- !u!4 &1044366770
 Transform:
   m_ObjectHideFlags: 0

@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelController : MonoBehaviour
 {
     public int[,] IceMap;
     public int CurrMissionNum = 0;
+
     public List<int[,]> Missions;
     public List<MissionItem> missionItems;
 
@@ -38,7 +40,9 @@ public class LevelController : MonoBehaviour
                 // 產生黃球
                 if (map[y, x] == 3)
                 {
-                    Instantiate(yellowball, CoordinateSystem.GridToPosition(x, y), Quaternion.identity);
+                    MissionItem item = Instantiate(yellowball, CoordinateSystem.GridToPosition(x, y), Quaternion.identity);
+                    item.LvController = this;
+                    missionItems.Add(item);
                 }
             }
         }
@@ -51,19 +55,34 @@ public class LevelController : MonoBehaviour
         CreateMapItems(mission);
     }
 
+    // 目標物件被銷毀
     public void OnMissionItemDestory(MissionItem item)
     {
+        // 移除清單中目標物件
         missionItems.Remove(item);
+
         Debug.Log("Item = " + missionItems.Count);
+
+        // 清除完目標物件
         if (missionItems.Count == 0)
         {
-            Debug.Log("Finish");
+            if (CurrMissionNum < (Missions.Count - 1))
+            {
+                // 切換任務
+                CurrMissionNum++;
+                InitMission(Missions[CurrMissionNum]);
+            }
+            else
+            {
+                // 切換關卡
+                SceneManager.LoadScene(1);
+            }
         }
     }
 
+    // 角色控制
     public void PlayerControl()
     {
-        // 角色控制
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             player.FaceDir = FaceDirection.Left;

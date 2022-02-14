@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class LevelController1 : LevelController
 {
-    //球的數量
-    int BallNum = 20;
-
     void Start()
     {
         // 定義冰塊地圖
